@@ -49,6 +49,7 @@ body {
 header {
     display: flex;
     flex-direction: column;
+    height: 15vh;
 }
 
 .win-header {
@@ -79,7 +80,7 @@ header > .app-header {
     background-color: var(--dm-light);
     
     display: flex;
-    
+    height: 100%;
 
 }
 
@@ -88,6 +89,7 @@ header > .app-header {
 width: 65%;
 padding: 0.4rem 0.7rem;
 
+
 }
 
 .profile {
@@ -95,7 +97,7 @@ padding: 0.4rem 0.7rem;
     padding: 0.7rem;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     min-width: 340px;
     border-right: 1.5px solid var(--dm-lin);
     justify-content: space-between;
@@ -117,14 +119,14 @@ padding: 0.4rem 0.7rem;
 
 #main {
     display: flex;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     
 }
 #lx {
     background-color: var(--dm-dark);
     width: 35%;
-    
+    height: 85vh;
     min-width: 340px;
     border-right: 1.5px solid var(--dm-lin);
 
@@ -138,6 +140,7 @@ background-repeat: repeat;
 background-size: contain;
 min-width: 500px;
 width: 65%;
+height: 85vh;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -146,7 +149,7 @@ justify-content: space-between;
 .input-bar {
     background-color: var(--dm-light);
     
-
+    position: sticky;
 }
 
 
@@ -156,6 +159,7 @@ justify-content: space-between;
     flex-direction: column;
     font-size: 12px;
     overflow: auto;
+    
 }
 
 .message {
@@ -188,7 +192,7 @@ justify-content: space-between;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
- 
+min-height: 40px;
 }
 
 .input-bar > i {
