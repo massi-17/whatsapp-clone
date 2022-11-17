@@ -37,14 +37,16 @@ function stampMsg() {
   icon.classList.add('fa-check-double')
   span.appendChild(icon)
 
- 
+  
   setTimeout(function() {
     icon.classList.add('read')
-   
     
-    texts.push(msgText.innerHTML)
-    console.log(texts)
-    localStorage.setItem('text', JSON.stringify(texts));
+  
+      
+      texts.push(msgText.innerHTML)
+      localStorage.setItem('text', JSON.stringify(texts))
+    
+    
   }, 2000)
 }
 
@@ -60,19 +62,20 @@ inputText.addEventListener("keypress", event => {
 })
 
 
-let archiviati = JSON.parse(localStorage.getItem('text'))
 
-vecchi()
 
-function vecchi() {
 
-  for (let i = 0; i < archiviati.length; i++) {
-    console.log(archiviati[i])
+
+function loadTexts() {
+  let archiviati = localStorage.getItem('text')
+  texts = JSON.parse(archiviati)
+  for (let i = 0; i < texts.length; i++) {
+    console.log(texts[i])
   const message = document.createElement("div");
   message.classList.add('message')
   chat.appendChild(message)
   let msgText = document.createElement('div')
-  msgText.innerHTML = archiviati[i]
+  msgText.innerHTML = texts[i]
   message.appendChild(msgText)
 
   let span = document.createElement('span')
@@ -96,3 +99,4 @@ function vecchi() {
 }
 
 
+loadTexts()
